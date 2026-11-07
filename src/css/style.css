@@ -356,3 +356,88 @@ h2 {
     flex-direction: column;
   }
 }
+
+
+/*Css do formulario */
+
+#form-adocao {
+  background: var(--branco);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #e8e7e1;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+#form-adocao p {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#form-adocao p:has(input[type="radio"]) {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+#form-adocao input[type="text"],
+#form-adocao input[type="email"],
+#form-adocao input[type="tel"],
+#form-adocao select,
+#form-adocao textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit; 
+  font-size: 15px;
+  color: var(--grafite);
+  background-color: var(--branco);
+  transition: border-color 0.3s ease; 
+}
+
+#form-adocao input[type="text"]:focus,
+#form-adocao input[type="email"]:focus,
+#form-adocao input[type="tel"]:focus,
+#form-adocao select:focus,
+#form-adocao textarea:focus {
+  outline: none;
+  border-color: var(--verde-suave);
+  box-shadow: 0 0 0 2px rgba(120, 155, 131, 0.2);
+}
+
+#form-adocao textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#form-adocao input[readonly] {
+  background-color: #f9f9f9;
+  color: #777;
+  cursor: not-allowed;
+}
+
+#form-adocao p:has(#cep) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 15px;
+}
+
+#form-adocao p:has(#bairro) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+@media (max-width: 700px) {
+  #form-adocao {
+    padding: 20px;
+  }
+  
+  #form-adocao p:has(#cep),
+  #form-adocao p:has(#bairro) {
+      grid-template-columns: 1fr; 
+  }
+}
