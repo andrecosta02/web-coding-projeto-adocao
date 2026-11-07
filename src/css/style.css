@@ -166,10 +166,17 @@ h2 {
 }
 
 .cartao-animal {
+  display: block;
   overflow: hidden;
   border: 1px solid #e8e7e1;
   border-radius: 7px;
   background: var(--branco);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartao-animal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 79, 67, 0.12);
 }
 
 .cartao-animal img {
